@@ -1,7 +1,6 @@
 module.exports = function(filename) {
     	return `import React, { Component, PropTypes } from 'react';
 import {
-    StyleSheet,
     Text,
     View
 } from 'react-native';

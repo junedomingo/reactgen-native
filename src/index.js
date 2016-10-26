@@ -14,6 +14,17 @@ if (fileExists('.env')) {
 	generate(defaultRootPath);
 }
 
+function generateStyles(defaultRootPath, directory, filename) {
+	// ./styles
+	writeFileP(`./${defaultRootPath}/${directory}/styles/${filename}.js`, require('./templates/styles/styles.js'), (error, info) => {
+		if (error) {
+			console.error('Failed', error);
+		} else {
+			console.log(`${filename}.js styles has been created to ${defaultRootPath}/${directory}/styles`.yellow);
+		}
+	});
+}
+
 function generate(defaultRootPath) {
 	program
 		.version('1.0.0')
@@ -29,6 +40,8 @@ function generate(defaultRootPath) {
 						console.log(`${filename}.js component(presentaional) has been created to ${defaultRootPath}/${directory}/`.yellow);
 					}
 				});
+
+				generateStyles(defaultRootPath, directory, filename);
 			}
 
 			if (program.container) {
@@ -39,6 +52,8 @@ function generate(defaultRootPath) {
 						console.log(`${filename}.js component(container) has been created to ${defaultRootPath}/${directory}/`.yellow);
 					}
 				});
+
+				generateStyles(defaultRootPath, directory, filename);
 			}
 		}).parse(process.argv);
 
