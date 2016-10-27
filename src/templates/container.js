@@ -18,7 +18,7 @@ class ${filename} extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<Text>Hello</Text>
+				<Text style={styles.message}>${filename} Screen</Text>
 			</View>
 		);
 	}

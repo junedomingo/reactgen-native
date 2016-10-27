@@ -9,7 +9,7 @@ import styles from './styles/${filename}';
 
 const ${filename} = () => (
 	<View style={styles.container}>
-		<Text>Hello</Text>
+		<Text style={styles.message}>${filename} Screen</Text>
 	</View>
 );
 
