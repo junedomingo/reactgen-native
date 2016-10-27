@@ -5,6 +5,8 @@ import {
     View
 } from 'react-native';
 
+import styles from './styles/${filename}';
+
 const ${filename} = () => (
 	<View>
 		<Text>Hello</Text>

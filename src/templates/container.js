@@ -7,6 +7,7 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import styles from './styles/${filename}';
 // import * as postsActions from './posts.actions';
 
 class ${filename} extends Component {
