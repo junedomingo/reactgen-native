@@ -8,7 +8,7 @@ import {
 import styles from './styles/${filename}';
 
 const ${filename} = () => (
-	<View>
+	<View style={styles.container}>
 		<Text>Hello</Text>
 	</View>
 );

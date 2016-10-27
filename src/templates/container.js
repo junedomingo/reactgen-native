@@ -17,7 +17,7 @@ class ${filename} extends Component {
 
 	render() {
 		return (
-			<View>
+			<View style={styles.container}>
 				<Text>Hello</Text>
 			</View>
 		);
